@@ -10,6 +10,8 @@
 		F05A47D6255EEF6E00794F9C /* RangeSumBST.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05A47CC255EEF6D00794F9C /* RangeSumBST.framework */; };
 		F05A47DB255EEF6E00794F9C /* RangeSumBSTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A47DA255EEF6E00794F9C /* RangeSumBSTTests.swift */; };
 		F05A47DD255EEF6E00794F9C /* RangeSumBST.h in Headers */ = {isa = PBXBuildFile; fileRef = F05A47CF255EEF6D00794F9C /* RangeSumBST.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F05A47E9255EF12600794F9C /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A47E8255EF12600794F9C /* TreeNode.swift */; };
+		F05A47ED255EF1CB00794F9C /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05A47EC255EF1CB00794F9C /* BinarySearchTree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		F05A47D5255EEF6E00794F9C /* RangeSumBSTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RangeSumBSTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F05A47DA255EEF6E00794F9C /* RangeSumBSTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSumBSTTests.swift; sourceTree = "<group>"; };
 		F05A47DC255EEF6E00794F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05A47E8255EF12600794F9C /* TreeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
+		F05A47EC255EF1CB00794F9C /* BinarySearchTree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 			children = (
 				F05A47CF255EEF6D00794F9C /* RangeSumBST.h */,
 				F05A47D0255EEF6D00794F9C /* Info.plist */,
+				F05A47E8255EF12600794F9C /* TreeNode.swift */,
+				F05A47EC255EF1CB00794F9C /* BinarySearchTree.swift */,
 			);
 			path = RangeSumBST;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 				TargetAttributes = {
 					F05A47CB255EEF6D00794F9C = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					F05A47D4255EEF6E00794F9C = {
 						CreatedOnToolsVersion = 12.0;
@@ -194,6 +201,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F05A47ED255EF1CB00794F9C /* BinarySearchTree.swift in Sources */,
+				F05A47E9255EF12600794F9C /* TreeNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +349,7 @@
 		F05A47E1255EEF6E00794F9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -357,6 +367,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fm.RangeSumBST;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -364,6 +375,7 @@
 		F05A47E2255EEF6E00794F9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -388,6 +400,7 @@
 		F05A47E4255EEF6E00794F9C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T2XWZFPH38;
@@ -406,6 +419,7 @@
 		F05A47E5255EEF6E00794F9C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = T2XWZFPH38;

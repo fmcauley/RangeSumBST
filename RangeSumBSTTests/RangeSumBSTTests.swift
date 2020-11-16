@@ -18,16 +18,38 @@ class RangeSumBSTTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testThatBSTCanInsertValues() throws {
+        let bst = BinarySearchTree()
+        bst.insert(value: 10)
+        let output = bst.root.val
+        let expected = 10
+        
+        XCTAssertEqual(output, expected)
+    }
+    
+    func testThatBSTCanInsertThreeValuesAndThatTheLeftAndRightAreNotNil() {
+        let bst = BinarySearchTree()
+        bst.insert(value: 10)
+        bst.insert(value: 5)
+        bst.insert(value: 15)
+        
+        XCTAssertEqual(bst.root.val, 10)
+        XCTAssertEqual(bst.root.left?.val, 5)
+        XCTAssertEqual(bst.root.right?.val, 15)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testThatBSTCanTraverseTheTreeUsingRecursion() {
+        let bst = BinarySearchTree()
+        let values = [10,5,15,3,7,18]
+        bst.bulkInsert(values)
+        var count = 0
+        _ = bst.traverse(bst.root, low: 7, hight: 15) { (nodeValue:Int) -> Int in
+            count += nodeValue
+            return count
         }
+        
+        print(bst.sum)
     }
+
 
 }
